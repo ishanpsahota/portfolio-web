@@ -1,0 +1,18 @@
+
+html {
+
+    --theme-color: #fefefe;
+    --text-color: #000;
+
+}
+ 
+ [data-theme="dark"] {
+
+    --theme-color: #121212;
+    --text-color: #eee;
+
+}
+
+
+$background-color: var(--theme-color);
+$text-color: var(--text-color);

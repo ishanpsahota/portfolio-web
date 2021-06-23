@@ -1,0 +1,14 @@
+@import 'variables';
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+* {
+    color: $text-color;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.text {
+    &-special {
+        font-family: 'Dela Gothic One', cursive;
+    }
+}
