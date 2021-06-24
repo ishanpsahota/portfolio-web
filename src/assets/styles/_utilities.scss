@@ -1,7 +1,7 @@
 
 
 .full-view {
-    min-height: 65vh;
+    min-height: 70vh;
 }
 
 .icon {
@@ -11,21 +11,32 @@
         justify-content: center;
         display: flex;
         flex-direction: row;
+        // background-color: $dark;
+        border-radius: 20px;
+        padding: 0.4rem 0.6rem;        
 
-        label {
-            &:nth-child(1) {
-                margin-right: auto;
-            }
+        // label {
+        //     &:nth-child(1) {
+        //         margin-right: auto;
+        //     }
 
-            &:nth-child(3) {
-                margin-left: auto;
-            }            
-        }
+        //     &:nth-child(3) {
+        //         margin-left: auto;
+        //     }            
+        // }
 
         input {
             margin: auto 0.5rem !important;
         }
 
+    }
+
+}
+
+.border {
+
+    &-theme {
+        border: $theme-border;
     }
 
 }

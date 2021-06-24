@@ -3,12 +3,14 @@ html {
 
     --theme-color: #fafafa;
     --text-color: #000;
+    --theme-border: 1px solid rgba(180, 180, 180, 0.1);
 
 }
  
  [data-theme="dark"] {
 
     --theme-color: #121212;
+    --theme-border: 1px solid rgba(255, 255, 255, 0.1);
     // --theme-color: #14213d;
     --text-color: #eee;
     // https://coolors.co/f72585-b5179e-7209b7-560bad-480ca8-3a0ca3-3f37c9-4361ee-4895ef-4cc9f0
@@ -18,6 +20,14 @@ html {
 $accent: #f45b69;
 $purple: #55286f;
 $blue-md: #23395b;
+$dark: #232323;
+$light: #fefefe;
+$primary: #1566e1;
+$success: #0ea149;
+$info: #659df1;
+$secondary: #dedede;
+$warning: #febf01;
+$danger: #ff1000;
 
 // base colors
 $background-color: var(--theme-color);
@@ -31,6 +41,8 @@ $gradient-linear:  linear-gradient(126deg, rgba(181,23,158,1) 10%, rgba(67,97,23
 $gradient-bg: rgb(181,23,158);
 $gradient-radial: radial-gradient(circle, rgba(181,23,158,1) 10%, rgba(67,97,238,1) 70%, rgba(72,149,239,1) 80%);
 
+// extras
+$theme-border: var(--theme-border);
 
 .gradient {
     // background: rgb(247,37,133);
