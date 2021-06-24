@@ -1,0 +1,31 @@
+
+
+.full-view {
+    min-height: 65vh;
+}
+
+.icon {
+
+    &-stack-wrapper {
+
+        justify-content: center;
+        display: flex;
+        flex-direction: row;
+
+        label {
+            &:nth-child(1) {
+                margin-right: auto;
+            }
+
+            &:nth-child(3) {
+                margin-left: auto;
+            }            
+        }
+
+        input {
+            margin: auto 0.5rem !important;
+        }
+
+    }
+
+}

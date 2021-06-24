@@ -1,7 +1,7 @@
 
 html {
 
-    --theme-color: #fefefe;
+    --theme-color: #fafafa;
     --text-color: #000;
 
 }
@@ -9,10 +9,39 @@ html {
  [data-theme="dark"] {
 
     --theme-color: #121212;
+    // --theme-color: #14213d;
     --text-color: #eee;
-
+    // https://coolors.co/f72585-b5179e-7209b7-560bad-480ca8-3a0ca3-3f37c9-4361ee-4895ef-4cc9f0
 }
 
+// primary colors
+$accent: #f45b69;
+$purple: #55286f;
+$blue-md: #23395b;
 
+// base colors
 $background-color: var(--theme-color);
 $text-color: var(--text-color);
+// $gradient-bg: rgb(247,37,133);
+// $gradient-linear: linear-gradient(126deg, rgba(247,37,133,1) 0%, rgba(181,23,158,1) 10%, rgba(114,9,183,1) 20%, rgba(86,11,173,1) 30%, rgba(72,12,168,1) 40%, rgba(58,12,163,1) 50%, rgba(63,55,201,1) 60%, rgba(67,97,238,1) 70%, rgba(72,149,239,1) 80%, rgba(76,201,240,1) 90%);
+// $gradient-radial: radial-gradient(circle, rgba(247,37,133,1) 0%, rgba(181,23,158,1) 10%, rgba(114,9,183,1) 20%, rgba(86,11,173,1) 30%, rgba(72,12,168,1) 40%, rgba(58,12,163,1) 50%, rgba(63,55,201,1) 60%, rgba(67,97,238,1) 70%, rgba(72,149,239,1) 80%, rgba(76,201,240,1) 90%);
+// $gradient-svg: linear-gradient(180deg, #4CC9F0 0%, rgba(76, 201, 240, 0) 10.21%), linear-gradient(180deg, #4895EF 0%, rgba(72, 149, 239, 0) 89.9%), linear-gradient(180deg, #4361EE 0%, rgba(67, 97, 238, 0) 19.06%), linear-gradient(180deg, #3F37C9 0%, rgba(63, 55, 201, 0) 36.77%), linear-gradient(180deg, #3A0CA3 0%, rgba(58, 12, 163, 0) 47.71%), linear-gradient(180deg, #480CA8 0%, rgba(72, 12, 168, 0) 60.73%), linear-gradient(180deg, #560BAD 0%, rgba(86, 11, 173, 0) 100%), linear-gradient(180deg, #7209B7 27.92%, rgba(114, 9, 183, 0) 100%), linear-gradient(180deg, rgba(181, 23, 158, 0) 9.69%, #B5179E 100%), linear-gradient(180deg, #F72585 99.99%, rgba(247, 37, 133, 0) 100%);
+// $gradient-linear:  linear-gradient(126deg, rgba(181,23,158,1) 10%, rgba(67,97,238,1) 70%, rgba(72,149,239,1) 80%);
+$gradient-linear:  linear-gradient(126deg, rgba(181,23,158,1) 10%, rgba(67,97,238,1) 70%);
+$gradient-bg: rgb(181,23,158);
+$gradient-radial: radial-gradient(circle, rgba(181,23,158,1) 10%, rgba(67,97,238,1) 70%, rgba(72,149,239,1) 80%);
+
+
+.gradient {
+    // background: rgb(247,37,133);
+    // background: linear-gradient(126deg, rgba(247,37,133,1) 0%, rgba(181,23,158,1) 10%, rgba(114,9,183,1) 20%, rgba(86,11,173,1) 30%, rgba(72,12,168,1) 40%, rgba(58,12,163,1) 50%, rgba(63,55,201,1) 60%, rgba(67,97,238,1) 70%, rgba(72,149,239,1) 80%, rgba(76,201,240,1) 90%);
+    background: $gradient-bg;
+    background: $gradient-linear;
+}
+
+.gradient-radial {
+    // background: rgb(247,37,133);
+    // background: radial-gradient(circle, rgba(247,37,133,1) 0%, rgba(181,23,158,1) 10%, rgba(114,9,183,1) 20%, rgba(86,11,173,1) 30%, rgba(72,12,168,1) 40%, rgba(58,12,163,1) 50%, rgba(63,55,201,1) 60%, rgba(67,97,238,1) 70%, rgba(72,149,239,1) 80%, rgba(76,201,240,1) 90%);
+    background: $gradient-bg;
+    background: $gradient-radial;
+}
