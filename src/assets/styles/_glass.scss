@@ -33,8 +33,21 @@
         box-shadow: $shadow;
         display: flex;   
         flex-direction: column;
-    }
 
+        &-mockup {
+            padding: 1rem 0.5rem !important;
+            max-height: 30rem;
+            overflow-y: scroll;            
+
+            &::-webkit-scrollbar {
+                display: none
+            }
+
+            img {
+                height: 90%;
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 996px) {

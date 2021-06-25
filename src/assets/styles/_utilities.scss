@@ -62,3 +62,43 @@
         transition: $transition;
     }
 }
+
+.mockup {
+
+    &-container {
+        // min-height: 20rem;
+    }
+
+    &-wrapper {
+        overflow-y: scroll;
+        // overflow-x: hidden;
+        max-height: 40rem;
+        // max-width: 100vw;
+        position: relative;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    &-item {
+        // min-height: 100%;
+        margin: 5rem auto !important;
+    }
+}
+
+.gradient {
+
+    &-img {
+
+        position: absolute;
+        filter: blur(75px);
+        z-index: -1;
+
+        &-right {
+            right: -10%;
+        }
+
+    }
+
+}
