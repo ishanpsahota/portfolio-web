@@ -10,7 +10,18 @@
         animation: 
             typewriter 3.5s steps(40, end),
             blink-caret .75s step-end infinite;
-      
+    }
+
+    &-fade {
+
+        &-show {
+            animation: fade-show ease 0.5s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;            
+            animation-delay: 0.5s;
+            opacity: 0;
+        }
+
     }
 }
 
@@ -24,3 +35,11 @@
     50% { border-color: orange; }
 }
 
+@keyframes fade-show {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}

@@ -18,4 +18,20 @@ body {
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
+
+    &-md-1 {
+        font-size: 6rem;
+    }
+
+    &-md {
+        font-size: 7rem;
+    }
+
+    &-lg {
+        font-size: 8rem;
+    }
+
+    &-xl {
+        font-size: 10rem;
+    }
 }
