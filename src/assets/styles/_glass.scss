@@ -15,9 +15,38 @@
         box-shadow: none;
         top: 0;
         // align-items: center;
-        padding: 6rem 2rem;
+        padding: 7rem 4rem;
         display: flex;
         flex-direction: column;
+    }
+
+    &-wrapper {
+        background-color: $glass-overlay;
+        border-radius: 10px;
+        height: 100%;
+        // width: 100%;
+        // max-width: 75%;
+        margin: auto;
+        border: $theme-border;
+        padding: 4rem;
+        --webkit-backdrop-filter: blur(15px);
+        box-shadow: $shadow;
+    }
+
+}
+
+@media screen and (max-width: 996px) {
+
+    .glass {
+
+        &-overlay {
+            padding: 7rem 1.5rem;
+        }
+
+        &-wrapper {
+            padding: 3rem 2rem;
+        }
+
     }
 
 }

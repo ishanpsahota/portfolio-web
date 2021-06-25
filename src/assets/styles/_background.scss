@@ -45,4 +45,10 @@
         background-color: $success !important;
     }    
 
+    &-glass {
+        background: $glass-overlay;
+        backdrop-filter: blur(10px);
+        --webkit-backdrop-filter: blur(10px);
+    }
+
 }

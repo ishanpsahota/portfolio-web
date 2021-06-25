@@ -53,34 +53,45 @@ function Navbar() {
             let homeWrapperht = document.getElementById('home__hero-wrapper').offsetHeight;            
             let navbarBrand = document.getElementById('navbar-brand'); 
             let themeSwitch = document.getElementById('theme-switch');
+            let dropdownDots = document.getElementById('dropdown-dots');
             
             // console.log(`${window.scrollY + nav.offsetHeight} ? ${homeWrapperht} `)
             
-            if(window.scrollY >= homeWrapperht - nav.offsetHeight) {
+            // if(window.scrollY >= homeWrapperht - nav.offsetHeight) {
+            if(window.scrollY >= 20) {
                 nav.classList.add('shadow-theme');                
                 themeSwitch.classList.add('shadow-theme')
+                nav.classList.add('bg-glass');
                 
                 if(theme === 'light') {
                     navbarBrand.classList.add('text-dark');
-                    nav.classList.add('bg-light')
+                    // nav.classList.add('bg-glass')
+                    dropdownDots.classList.add('text-dark')
                 }
 
                 if(theme === 'dark') {
-                    nav.classList.add('bg-dark')
+                    // nav.classList.add('bg-dark');
+                    if(dropdownDots.classList.contains('text-dark')) dropdownDots.classList.remove('text-dark')
                 }
 
             }
 
-            if(window.scrollY < homeWrapperht ) {                
+            // if(window.scrollY < homeWrapperht ) {                
+            if(window.scrollY < 20 ) {                
                 nav.classList.remove('shadow-theme');                
+                nav.classList.remove('bg-glass');                
                 themeSwitch.classList.remove('shadow-theme')                
                 navbarBrand.classList.remove('text-dark');
                 
-                if(theme === 'light') nav.classList.remove('bg-light')
+                if(theme === 'light') { 
+                    nav.classList.remove('bg-light')
+                    
+                    if(dropdownDots.classList.contains('text-dark')) dropdownDots.classList.remove('text-dark')
+                }
 
                 if(theme === 'dark') {
                     if(nav.classList.contains('bg-light')) nav.classList.remove('bg-light')
-
+                    if(dropdownDots.classList.contains('text-dark')) dropdownDots.classList.remove('text-dark')
                     nav.classList.remove('bg-dark')
                 }
                 
@@ -94,12 +105,15 @@ function Navbar() {
     var changeTheme = (e) => {        
 
         let navbarBrand = document.getElementById('navbar-brand');
-        let navWrapper = document.getElementById('nav-wrapper');
+        // let navWrapper = document.getElementById('nav-wrapper');
+        let dropdownDots = document.getElementById('dropdown-dots');
 
         if(theme === 'dark' ) {
             document.body.setAttribute('data-theme', 'light');
             setTheme('light')
             document.getElementById('navbar-brand').classList.add('text-dark')
+            // if(navWrapper.classList.contains('bg-dark')) navWrapper.classList.remove('bg-dark')
+            dropdownDots.classList.add('text-dark')
             // document.getElementById('nav-wrapper').classList.add('bg-light')
         }
 
@@ -109,16 +123,17 @@ function Navbar() {
             setTheme('dark')
             
             if(navbarBrand.classList.contains('text-dark')) navbarBrand.classList.remove('text-dark')
-            if(navWrapper.classList.contains('bg-light')) navWrapper.classList.remove('bg-light')
+            // if(navWrapper.classList.contains('bg-light')) navWrapper.classList.remove('bg-light')
 
             navbarBrand.classList.add('text-light')
+            dropdownDots.classList.add('text-light')
 
         }
     }    
 
     return (
         <Router>
-            <nav className="navbar navbar-expand-lg navbar-dark nav-wrapper " id="nav-wrapper">
+            <nav className="navbar navbar-expand-lg navbar-dark nav-wrapper border-theme-bottom" id="nav-wrapper">
                 <div className="container-fluid">
                     <Link to="/" className="navbar-brand text-special logo-link" id="navbar-brand">
                         <img src={logoWhite} className={logoLightClass}  alt="Ishan Prasad" />
@@ -127,9 +142,9 @@ function Navbar() {
                         Ishan Prasad
                     </Link>
                     <button className="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-                        <i className="bi-three-dots-vertical" />
+                        <i className="bi-three-dots-vertical" id="dropdown-dots" />
                     </button>
-                    <div className="collapse justify-content-end navbar-collapse" id="navbar">
+                    <div className="collapse justify-content-end navbar-collapse " id="navbar">
                         <ul className="navbar-nav  mb-2 p-3 p-lg-0 mb-lg-0">
                             <li className="nav-item mx-auto">
                                 <div className={themeSwitchClass} id="theme-switch">

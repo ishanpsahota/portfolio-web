@@ -29,3 +29,31 @@ body {
     position: relative;    
     // transition: 0.2s ease;
 }
+
+.text-svg-container {
+
+    .text-wrapper {
+
+        margin: auto ;
+        padding: 2rem;
+    }
+
+    .svg-wrapper {
+        margin: auto;
+
+        img {
+            max-width: 80%;
+            height: auto;
+            margin: auto;            
+        }
+    }
+}
+
+
+@media screen and (max-width: 996px) {
+    .svg-wrapper {
+        img {
+            max-width: 90% !important;
+        }
+    }
+}
