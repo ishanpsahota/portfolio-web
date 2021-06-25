@@ -1,5 +1,5 @@
 
-import helloSvg from '../../assets/svgs/hello.svg';
+// import helloSvg from '../../assets/svgs/hello.svg';
 
 function Home() {
     return (

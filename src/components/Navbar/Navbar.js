@@ -50,7 +50,7 @@ function Navbar() {
         var nav = document.getElementById('nav-wrapper');
         
         window.onscroll = function() {
-            let homeWrapperht = document.getElementById('home__hero-wrapper').offsetHeight;            
+            // let homeWrapperht = document.getElementById('home__hero-wrapper').offsetHeight;            
             let navbarBrand = document.getElementById('navbar-brand'); 
             let themeSwitch = document.getElementById('theme-switch');
             let dropdownDots = document.getElementById('dropdown-dots');
