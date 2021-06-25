@@ -4,10 +4,23 @@
 
     &-wrapper {
 
-        padding: 0.5rem;
+        padding: 0.35rem;
         position: fixed;
         width: 100%;
 
+        .logo-link {
+            img {
+                transition: 0.2s ease;
+                height: 3rem;
+                margin-right: 1rem;
+            }
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;            
+        }
+
+        transition: $transition;
     }
 
     &-list {

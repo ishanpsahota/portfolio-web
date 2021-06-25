@@ -36,7 +36,29 @@
 .border {
 
     &-theme {
-        border: $theme-border;
+
+        &-top {
+            border-top: $theme-border;
+        }
+        
+        &-bottom {
+            border-bottom: $theme-border;
+        }
+
+        &-right {
+            border-right: $theme-border;
+        }
+
+        &-left {
+            border-left: $theme-border;
+        }
     }
 
+}
+
+.shadow {
+    &-theme {
+        box-shadow: $shadow;
+        transition: $transition;
+    }
 }

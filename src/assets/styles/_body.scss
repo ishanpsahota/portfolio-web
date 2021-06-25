@@ -1,9 +1,19 @@
 @import 'variables';
 
+:root {
+    font-size: 16px;
+}
+
 body {
     background-color: $background-color;
-    font-size: 16px;
     box-sizing: border-box;
+    transition: 0.2s ease;
+}
+
+[data-theme="light"] {
+    .gradient {
+        color: #fff !important;
+    }
 }
 
 .row {
@@ -15,6 +25,7 @@ body {
 .hero-polygon-wrapper {
 
     clip-path: polygon(100% 0%, 0% 0%, 0% 100%, 100% 75%);
-    z-index: -100;
-    position: relative;
+    z-index: -1;
+    position: relative;    
+    // transition: 0.2s ease;
 }

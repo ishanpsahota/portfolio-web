@@ -2,11 +2,12 @@
 import {
     BrowserRouter as Router, Link
 } from "react-router-dom";
-import { useState  } from 'react'
+import { useState, useEffect  } from 'react'
 
 import classNames from "classnames";
 
-import logo from '../../assets/svgs/logo-transparent.svg'
+import logoWhite from '../../assets/svgs/logo-white.svg'
+import logoDark from '../../assets/svgs/logo-dark.svg'
   
 function Navbar() {
 
@@ -32,33 +33,106 @@ function Navbar() {
         'bg-light': theme.match('light')
     })
 
+    const logoLightClass = classNames({
+        'd-block': theme.match('dark'),
+        'd-none': theme.match('light'),        
+    })
+
+    const logoDarkClass = classNames({
+        'd-block': theme.match('light'),
+        'd-none': theme.match('dark')
+    })
+
+    
+
+    useEffect(() => {
+
+        var nav = document.getElementById('nav-wrapper');
+        
+        window.onscroll = function() {
+            let homeWrapperht = document.getElementById('home__hero-wrapper').offsetHeight;            
+            let navbarBrand = document.getElementById('navbar-brand'); 
+            let themeSwitch = document.getElementById('theme-switch');
+            
+            // console.log(`${window.scrollY + nav.offsetHeight} ? ${homeWrapperht} `)
+            
+            if(window.scrollY >= homeWrapperht - nav.offsetHeight) {
+                nav.classList.add('shadow-theme');                
+                themeSwitch.classList.add('shadow-theme')
+                
+                if(theme === 'light') {
+                    navbarBrand.classList.add('text-dark');
+                    nav.classList.add('bg-light')
+                }
+
+                if(theme === 'dark') {
+                    nav.classList.add('bg-dark')
+                }
+
+            }
+
+            if(window.scrollY < homeWrapperht ) {                
+                nav.classList.remove('shadow-theme');                
+                themeSwitch.classList.remove('shadow-theme')                
+                navbarBrand.classList.remove('text-dark');
+                
+                if(theme === 'light') nav.classList.remove('bg-light')
+
+                if(theme === 'dark') {
+                    if(nav.classList.contains('bg-light')) nav.classList.remove('bg-light')
+
+                    nav.classList.remove('bg-dark')
+                }
+                
+            }
+
+        }
+        
+        
+    })
+
     var changeTheme = (e) => {        
+
+        let navbarBrand = document.getElementById('navbar-brand');
+        let navWrapper = document.getElementById('nav-wrapper');
 
         if(theme === 'dark' ) {
             document.body.setAttribute('data-theme', 'light');
             setTheme('light')
+            document.getElementById('navbar-brand').classList.add('text-dark')
+            // document.getElementById('nav-wrapper').classList.add('bg-light')
         }
 
         if(theme === 'light' ) {
+
             document.body.setAttribute('data-theme', 'dark');
             setTheme('dark')
+            
+            if(navbarBrand.classList.contains('text-dark')) navbarBrand.classList.remove('text-dark')
+            if(navWrapper.classList.contains('bg-light')) navWrapper.classList.remove('bg-light')
+
+            navbarBrand.classList.add('text-light')
+
         }
     }    
 
     return (
         <Router>
-            <nav className="navbar navbar-expand-lg navbar-dark nav-wrapper border-theme">
+            <nav className="navbar navbar-expand-lg navbar-dark nav-wrapper " id="nav-wrapper">
                 <div className="container-fluid">
-                    <Link to="/" className="navbar-brand text-special">
-                        <img src={logo} alt="Ishan Prasad" />
+                    <Link to="/" className="navbar-brand text-special logo-link" id="navbar-brand">
+                        <img src={logoWhite} className={logoLightClass}  alt="Ishan Prasad" />
+                        <img src={logoDark} className={logoDarkClass} alt="Ishan Prasad" />
+                        
+                        Ishan Prasad
                     </Link>
-                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
+                    <button className="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                        <i className="bi-three-dots-vertical" />
                     </button>
                     <div className="collapse justify-content-end navbar-collapse" id="navbar">
                         <ul className="navbar-nav  mb-2 p-3 p-lg-0 mb-lg-0">
                             <li className="nav-item mx-auto">
-                                <div className={themeSwitchClass}>
+                                <div className={themeSwitchClass} id="theme-switch">
                                     <label className="form-check-label" > <i className={iconClassLight}  ></i> </label>
                                     <input className="form-check-input" onChange={changeTheme} checked={theme === 'dark' ? true : false} type="checkbox" />
                                     <label className="form-check-label" > <i className={iconClassDark}  ></i>  </label>

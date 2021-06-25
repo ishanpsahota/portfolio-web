@@ -2,13 +2,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
-* {
+body {
     color: $text-color;
     font-family: 'Ubuntu', sans-serif;
 }
 
 .text {
     &-special {
-        font-family: 'Dela Gothic One', cursive;
+        font-family: 'Dela Gothic One', cursive !important;
+    }
+
+    &-gradient {
+        background: $gradient-linear;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 }
