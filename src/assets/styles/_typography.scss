@@ -5,6 +5,22 @@
 body {
     color: $text-color;
     font-family: 'Ubuntu', sans-serif;
+    scroll-behavior: smooth;
+}
+
+a {
+    color: $text-color;
+    transition: 0.2s ease;        
+
+    &.mockup-link {
+        text-decoration: none;        
+        margin: 0.35rem auto;
+
+        &:hover {
+
+            color: $purple;
+        }
+    }
 }
 
 .text {
@@ -37,5 +53,15 @@ body {
 
     &-xl {
         font-size: 10rem;
+    }
+}
+
+[data-theme="dark"] {
+    a {
+        &.mockup-link {
+            &:hover {
+                color: $primary;
+            }
+        }
     }
 }

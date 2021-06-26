@@ -6,7 +6,8 @@
 
         padding: 0.35rem;
         position: fixed;
-        width: 100%;        
+        width: 100%;
+        z-index: 50;        
 
         .logo-link {
             img {
@@ -31,4 +32,12 @@
 
     }
 
+}
+
+@media screen and (max-width: 996px ) {
+    .logo-link {
+        img {
+            height: 2rem !important;
+        }
+    }
 }

@@ -30,22 +30,27 @@
         border: $theme-border;
         padding: 4rem;
         --webkit-backdrop-filter: blur(15px);
+        // box-shadow: $shadow;
         box-shadow: $shadow;
         display: flex;   
+        transition: 0.2s ease;
         flex-direction: column;
 
         &-mockup {
             padding: 1rem 0.5rem !important;
             max-height: 30rem;
-            overflow-y: scroll;            
+            overflow-y: scroll;
+            align-items: center;
+            // overflow-x: hidden;            
 
             &::-webkit-scrollbar {
-                display: none
+                display: none;
+                // visibility: hidden;
             }
 
-            img {
-                height: 90%;
-            }
+            // img {
+            //     width: 10%;
+            // }
         }
     }
 }
@@ -60,6 +65,15 @@
 
         &-wrapper {
             padding: 3rem 2rem;
+
+            &-mockup {
+                &::-webkit-scrollbar {
+                    // display: block;
+                    // display: inline;
+                    // display: contents;
+                    // display: inline-block;
+                }
+            }
         }
 
     }

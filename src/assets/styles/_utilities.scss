@@ -70,20 +70,21 @@
     }
 
     &-wrapper {
-        overflow-y: scroll;
+        // overflow-y: scroll;
         // overflow-x: hidden;
         max-height: 40rem;
         // max-width: 100vw;
         position: relative;
 
-        &::-webkit-scrollbar {
-            display: none;
-        }
+        // &::-webkit-scrollbar {
+        //     display: none;
+        // }
     }
 
     &-item {
         // min-height: 100%;
-        margin: 5rem auto !important;
+        // margin: 5rem auto !important;
+        // overflow-x: hidden;
     }
 }
 
@@ -92,13 +93,31 @@
     &-img {
 
         position: absolute;
-        filter: blur(75px);
+        filter: blur(45px);
         z-index: -1;
+        // width: 30%;
 
         &-right {
-            right: -10%;
+            right: 0%;
+            top: 30%;
         }
 
     }
 
+}
+
+@media screen and (min-width: 768px) {
+
+    .gradient {
+
+        &-img {
+            width: 30%;
+            filter: blur(70px);
+
+            &-right {
+                right: 5%;
+                top: 15%;
+            }
+        }        
+    }
 }

@@ -5,7 +5,7 @@ import lazydevWeb from '../../assets/gifs/lazydev.gif';
 import lazydevMob from '../../assets/images/lazydev-mobile.jpg';
 
 // glass
-// import ellipse04 from '../../assets/glass/Ellipse04.png';
+import ellipse04 from '../../assets/glass/Ellipse04.png';
 
 function Home() {
 
@@ -60,10 +60,16 @@ function Home() {
                 </div>
                 <div className="svg-wrapper col-xl-6">
                     <div className="glass-wrapper glass-wrapper-mockup" id="lazydev-mockup">
-                        <picture>                            
-                            <source media="(max-width:760px)" alt="lazydev" srcSet={lazydevMob}/>                                                        
-                            <img src={lazydevWeb} alt="lazydev" id="lazydev-mockup__img" />
-                        </picture>                    
+                        {/* <div className="mockup-item"> */}
+                            <picture className="d-flex flex-row">                            
+                                <source media="(max-width:760px)" alt="lazydev" className="mockup-img" srcSet={lazydevMob}/>                                                        
+                                <img src={lazydevWeb} alt="lazydev" className="m-auto mockup-img" id="lazydev-mockup__img" />
+                            </picture>      
+                            <img src={ellipse04} alt="glass-bg" className="gradient-img gradient-img-right" />  
+                            
+                            <a href="https://laazzzyyyydev.netlify.app" className="mockup-link h5" rel="noreferrer" target="_blank"> laazzzyyyydev.netlify.app </a>
+                            
+                        {/* </div>                         */}
                     </div>
                 </div>
             </div>                                        
