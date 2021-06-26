@@ -86,6 +86,14 @@
         // margin: 5rem auto !important;
         // overflow-x: hidden;
     }
+
+    &-img {
+        // background-position: center;
+        // background-size: cover;
+        // background-attachment: fixed;
+        min-height: 10rem;
+        width: auto;        
+    }
 }
 
 .gradient {
@@ -112,11 +120,11 @@
 
         &-img {
             width: 30%;
-            filter: blur(70px);
+            filter: blur(60px);
 
             &-right {
                 right: 5%;
-                top: 15%;
+                top: 5%;
             }
         }        
     }

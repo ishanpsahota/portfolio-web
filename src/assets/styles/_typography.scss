@@ -14,7 +14,7 @@ a {
 
     &.mockup-link {
         text-decoration: none;        
-        margin: 0.35rem auto;
+        margin: 0.5rem auto;
 
         &:hover {
 
@@ -33,6 +33,14 @@ a {
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+    }
+
+    &-sm {
+        font-size: 5rem;
+    }
+
+    &-sm-1 {
+        font-size: 4.5rem;
     }
 
     &-md-1 {
@@ -54,6 +62,11 @@ a {
     &-xl {
         font-size: 10rem;
     }
+
+    &-responsive {
+        font-size: 2rem;
+    }
+
 }
 
 [data-theme="dark"] {
@@ -65,3 +78,46 @@ a {
         }
     }
 }
+
+@media (min-width: 576px) { 
+
+    .text {
+        &-responsive {
+            font-size: 2rem !important;
+        }
+    }
+
+ }
+
+// Small devices (landscape phones, less than 768px)
+@media (min-width: 768px) { 
+
+    .text {
+        &-responsive {
+            font-size: 3rem !important;
+        }
+    }
+
+ }
+
+// Medium devices (tablets, less than 992px)
+@media (min-width: 992px) { 
+
+    .text {
+        &-responsive {
+            font-size: 4rem !important;
+        }
+    }
+
+ }
+
+// Large devices (desktops, less than 1200px)
+@media (min-width: 1200px) { 
+
+    .text {
+        &-responsive {
+            font-size: 5rem;
+        }
+    }
+
+ }

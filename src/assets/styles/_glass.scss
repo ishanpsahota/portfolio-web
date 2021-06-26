@@ -10,7 +10,7 @@
         min-height: 100%;
         max-width: 100%;
         width: 100%;
-        z-index: 10;
+        z-index: 0;
         transition: 0.2s ease;
         box-shadow: none;
         top: 0;
@@ -21,7 +21,7 @@
     }
 
     &-wrapper {
-        background-color: $glass-overlay;
+        background-color: $glass-wrapper;
         border-radius: 10px;
         height: 100%;
         // width: 100%;
@@ -41,6 +41,7 @@
             max-height: 30rem;
             overflow-y: scroll;
             align-items: center;
+            // object-fit: cover;
             // overflow-x: hidden;            
 
             &::-webkit-scrollbar {
@@ -49,7 +50,8 @@
             }
 
             // img {
-            //     width: 10%;
+            //     // width: 10%;
+            //     object-fit: cover;
             // }
         }
     }

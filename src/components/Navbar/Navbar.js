@@ -150,7 +150,7 @@ function Navbar() {
                             <li className="nav-item mx-auto">
                                 <div className={themeSwitchClass} id="theme-switch">
                                     <label className="form-check-label" > <i className={iconClassLight}  ></i> </label>
-                                    <input className="form-check-input" onChange={changeTheme} checked={theme === 'dark' ? true : false} type="checkbox" />
+                                    <input className="form-check-input" id="theme_switch" name="theme_switch" onChange={changeTheme} checked={theme === 'dark' ? true : false} value="dark" type="checkbox" />
                                     <label className="form-check-label" > <i className={iconClassDark}  ></i>  </label>
                                 </div>
                             </li>
