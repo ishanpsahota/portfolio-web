@@ -7,7 +7,9 @@ import reportWebVitals from './reportWebVitals';
 
 // bootstrap
 // import './assets/styles/bootstrap/css/bootstrap.min.css';
+// eslint-disable-next-line
 import $ from 'jquery';
+// eslint-disable-next-line
 import Popper from '@popperjs/core';
 
 require('bootstrap')
