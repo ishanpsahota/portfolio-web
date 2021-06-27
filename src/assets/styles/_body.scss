@@ -93,3 +93,21 @@ body {
         padding: 1rem !important;
     }
 }
+
+@media screen and (max-width: 1368px) {
+
+    .text-svg-container {
+        text-align: center;
+        // flex-direction: column;
+    }
+
+    // .svg-wrapper {
+    //     img {
+    //         max-width: 95% !important;
+    //     }
+    // }
+
+    // .text-wrapper {
+    //     padding: 1rem !important;
+    // }
+}

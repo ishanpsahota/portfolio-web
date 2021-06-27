@@ -1,9 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-// import {} from 'bootstrap-icons';
+
+// bootstrap
+// import './assets/styles/bootstrap/css/bootstrap.min.css';
+import $ from 'jquery';
+import Popper from '@popperjs/core';
+
+require('bootstrap')
+
 
 ReactDOM.render(
   <React.StrictMode>

@@ -2,31 +2,16 @@
 import { useState, useEffect } from 'react'; 
 // import helloSvg from '../../assets/svgs/hello.svg';
 import lazydevWeb from '../../assets/gifs/lazydev.gif';
-import lazydevMob from '../../assets/images/lazydev-mobile.jpg';
+import lazydevMob from '../../assets/images/compressed/lazydev-home.webp';
 
 import classNames from 'classnames';
 
+import $ from 'jquery'
+
 // glass
-import ellipse04 from '../../assets/glass/Ellipse04.png';
+import ellipse04 from '../../assets/glass/compressed/Ellipse04.webp';
 
-function Home() {
-
-    // useEffect(() => {
-
-        // window.onscroll = function() {
-
-        //     let projectDiv = document.getElementById('projects');
-        //     let mockupImg = document.getElementById('lazydev-mockup')
-
-        //     // console.log(projectDiv.offsetTop)
-
-        //     if(window.scrollY >= projectDiv.offsetTop ) {
-        //         mockupImg.scrollTop = 480
-        //     }
-
-        // }
-
-    // })
+function Home() {    
 
     const [theme, setTheme] = useState(document.body.getAttribute('data-theme'));
 
@@ -38,6 +23,16 @@ function Home() {
             // console.log(e)
 
             setTheme(e.target.checked ? 'dark' : 'light');
+        })
+
+        // let w = document.getElementById('lazydev-mockup__wrapper')
+        // let img = document.getElementById('lazydev-mockup__img')
+        // // let mob = document.getElementById('lazydev-mockup__img-mob')
+        let mob = $('#lazydev-mockup__img-mob');
+        // let web = document.getElementById('lazydev-mockup__img-web')
+
+        $('#lazydev-mockup').on('scroll', function() {
+            console.log(mob.scrollTop)
         })
 
     })
@@ -88,21 +83,22 @@ function Home() {
                 </div>                
             </div>
             
-            <div className="text-svg-container row mx-0 my-5 full-view" id="projects">
+            <div className="text-svg-container row mx-0 mt-5 mb-1 full-view" id="projects">
                 <div className="text-wrapper  col-xl-6">
                     <h1 className="text-responsive my-auto">
                         Allow me to show you some of my creations :)
                     </h1>                                                                
                 </div>
                 <div className="svg-wrapper col-xl-6">
-                    <div className="glass-wrapper glass-wrapper-mockup" id="lazydev-mockup">                        
-                        <picture className="d-flex flex-row">                            
-                            <source media="(max-width:760px)" alt="lazydev" className="mockup-img" srcSet={lazydevMob}/>                                                        
-                            <img src={lazydevWeb} alt="lazydev" className="m-auto mockup-img" id="lazydev-mockup__img" />
-                        </picture>      
-                        {/* <div className="mockup-img" style={mockupImg}></div> */}
+                    <div className="mockup-wrapper" id="lazydev-mockup">                        
+                        <div className="mockup-item" id="lazydev-mockup__wrapper">
+                            <picture className="" id="lazydev-mockup__img">                            
+                                <source media="(max-width:760px)" alt="lazydev" className="mockup-img" id="lazydev-mockup__img-mob" srcSet={lazydevMob}/>                                                        
+                                <img src={lazydevWeb} alt="lazydev" className="m-auto mockup-img" id="lazydev-mockup__img-web" />
+                            </picture>      
+                        </div>                                                
                         <img src={ellipse04} alt="glass-bg" className="gradient-img gradient-img-right" />  
-                        <div className="my-2">
+                        <div className="my-2 mockup-text">
                             <a href="https://laazzzyyyydev.netlify.app" className="mockup-link h6 " rel="noreferrer" target="_blank"> laazzzyyyydev.netlify.app </a>                        
                         </div>                            
                     </div>

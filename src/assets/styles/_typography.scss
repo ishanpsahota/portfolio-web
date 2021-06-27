@@ -63,10 +63,6 @@ a {
         font-size: 10rem;
     }
 
-    &-responsive {
-        font-size: 2rem;
-    }
-
 }
 
 [data-theme="dark"] {
@@ -83,7 +79,7 @@ a {
 
     .text {
         &-responsive {
-            font-size: 2rem !important;
+            font-size: 2rem;
         }
     }
 
@@ -94,7 +90,7 @@ a {
 
     .text {
         &-responsive {
-            font-size: 3rem !important;
+            font-size: 3rem;
         }
     }
 
@@ -105,7 +101,7 @@ a {
 
     .text {
         &-responsive {
-            font-size: 4rem !important;
+            font-size: 4rem;
         }
     }
 

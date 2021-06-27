@@ -66,33 +66,38 @@
 .mockup {
 
     &-container {
-        // min-height: 20rem;
+        
     }
 
     &-wrapper {
-        // overflow-y: scroll;
-        // overflow-x: hidden;
-        max-height: 40rem;
-        // max-width: 100vw;
-        position: relative;
-
-        // &::-webkit-scrollbar {
-        //     display: none;
-        // }
+        
+        // position: relative;        
+        display: flex;
+        flex-direction: column;
+        text-align: center;
     }
 
     &-item {
-        // min-height: 100%;
-        // margin: 5rem auto !important;
-        // overflow-x: hidden;
+        max-height: 28rem;   
+        overflow-y: auto;
+        // position: relative;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        margin-bottom: 1rem;
     }
 
     &-img {
-        // background-position: center;
-        // background-size: cover;
-        // background-attachment: fixed;
-        min-height: 10rem;
-        width: auto;        
+        // max-height: 85%;
+        border: $theme-border;
+        border-radius: 3px;
+        box-shadow: $shadow;
+    }
+
+    &-text {
+        // margin-top: 2rem;
+        bottom: 0;
+        // position: absolute;
     }
 }
 

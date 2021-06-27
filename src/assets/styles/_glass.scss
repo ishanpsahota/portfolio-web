@@ -36,24 +36,24 @@
         transition: 0.2s ease;
         flex-direction: column;
 
-        &-mockup {
-            padding: 1rem 0.5rem !important;
-            max-height: 30rem;
-            overflow-y: scroll;
-            align-items: center;
-            // object-fit: cover;
-            // overflow-x: hidden;            
+        // &-mockup {
+        //     padding: 1rem 0.5rem !important;
+        //     max-height: 35rem;
+        //     // overflow-y: scroll;
+        //     align-items: center;
+        //     // object-fit: cover;
+        //     // overflow-x: hidden;            
 
-            &::-webkit-scrollbar {
-                display: none;
-                // visibility: hidden;
-            }
+        //     &::-webkit-scrollbar {
+        //         display: none;
+        //         // visibility: hidden;
+        //     }
 
-            // img {
-            //     // width: 10%;
-            //     object-fit: cover;
-            // }
-        }
+        //     // img {
+        //     //     // width: 10%;
+        //     //     object-fit: cover;
+        //     // }
+        // }
     }
 }
 
