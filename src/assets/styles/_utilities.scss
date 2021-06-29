@@ -84,14 +84,19 @@
         &::-webkit-scrollbar {
             display: none;
         }
-        margin-bottom: 1rem;
+
+        // margin-left: auto;
+        // margin-right: auto;
+        margin-bottom: 1rem;        
+
     }
 
     &-img {
         // max-height: 85%;
         border: $theme-border;
         border-radius: 3px;
-        box-shadow: $shadow;
+        // box-shadow: $shadow;
+
     }
 
     &-text {
@@ -101,36 +106,102 @@
     }
 }
 
+.project {
+    &-wrapper {
+        padding: 0.25rem;
+        text-align: center;
+        position: relative;
+    }
+
+    &-item {
+
+        margin: 5rem auto;
+
+        &-img {
+
+            &-wrapper  {
+                margin: auto;
+                text-align: center;
+                // width: 100%;                
+            }
+
+            &-div {
+                min-height: 30rem;
+                max-height: 60rem;
+                // height: auto;
+                max-width: 90%;
+                // width: auto;
+                position: relative;
+                margin: 1rem auto;
+                box-shadow: $shadow;
+                border-radius: 10px;
+                border: $theme-border;
+            }
+
+            &-text {
+                position: absolute;
+                bottom: 0;
+                left: 0.5rem;
+                width: 98%;
+                // z-index: 10;
+            }
+
+        }
+
+    }
+}
+
 .gradient {
 
     &-img {
 
         position: absolute;
-        filter: blur(45px);
+        // filter: blur(45px);
         z-index: -1;
         // width: 30%;
+        max-width: 120%;
 
         &-right {
             right: 0%;
-            top: 30%;
+            top: 0%;
         }
 
     }
 
 }
 
+
 @media screen and (min-width: 768px) {
 
     .gradient {
 
         &-img {
-            width: 30%;
-            filter: blur(60px);
+            width: 40%;
+            // filter: blur(60px);
 
             &-right {
-                right: 5%;
+                right: 0%;
                 top: 5%;
             }
         }        
     }
+
+    .project {
+        &-wrapper {
+            padding: 3rem;
+            
+        }
+    }
+}
+
+@media screen and (max-width: 1025px) {
+
+    .parallax-banner-layer-0 {
+
+        background-position: center !important;
+        background-size: 150% auto !important;
+        background-repeat: no-repeat;
+
+    }
+
 }

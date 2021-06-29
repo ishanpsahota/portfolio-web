@@ -5,6 +5,8 @@ import './index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import { ParallaxProvider } from 'react-scroll-parallax';
+
 // bootstrap
 // import './assets/styles/bootstrap/css/bootstrap.min.css';
 // eslint-disable-next-line
@@ -17,7 +19,9 @@ require('bootstrap')
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ParallaxProvider>
+      <App />
+    </ParallaxProvider>  
   </React.StrictMode>,
   document.getElementById('root')
 );

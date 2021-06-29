@@ -18,7 +18,7 @@ a {
 
         &:hover {
 
-            color: $purple;
+            color: $info!important;
         }
     }
 }
@@ -63,13 +63,21 @@ a {
         font-size: 10rem;
     }
 
+    &-500 {
+        font-weight: 500 !important;
+    }
+
+    &-blue-md {
+        color: $blue-md !important;
+    }
+
 }
 
 [data-theme="dark"] {
     a {
         &.mockup-link {
             &:hover {
-                color: $primary;
+                color: $primary !important;
             }
         }
     }

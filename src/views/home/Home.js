@@ -1,15 +1,18 @@
 
+// packages
 import { useState, useEffect } from 'react'; 
-// import helloSvg from '../../assets/svgs/hello.svg';
-import lazydevWeb from '../../assets/gifs/lazydev.gif';
-import lazydevMob from '../../assets/images/compressed/lazydev-home.webp';
-
 import classNames from 'classnames';
-
 import $ from 'jquery'
+import ProjectWrapperLarge from '../../components/projectComponents/ProjectWrapperLarge';
 
 // glass
-import ellipse04 from '../../assets/glass/compressed/Ellipse04.webp';
+import ellipse04 from '../../assets/glass/compressed/ellipse-xl.webp';
+
+// images
+import lazydevHomeWeb from '../../assets/images/compressed/lazydev-web.webp'
+
+import ipsHomeWeb from '../../assets/images/compressed/ishanpsahota-home-web.webp'
+import impulsoHW from '../../assets/images/compressed/impulso-home-web.webp'
 
 function Home() {    
 
@@ -35,23 +38,84 @@ function Home() {
             console.log(mob.scrollTop)
         })
 
+        // console.log(prop)
+
     })
 
     const btnClass = classNames({
         'btn': true,
-        'btn-light':  theme.match('dark') ? true : false,
-        'btn-dark':  theme.match('light') ? true : false,
+        'btn-sm': true,
+        'btn-light':  theme.match('light') ? true : false,
+        'btn-dark':  theme.match('dark') ? true : false,
         'rounded-pill': true,
         'my-2': true,
         'px-3': true
     })
 
-    // const mockupImg = {
-    //     'background': `url(/assets/gifs/lazydev.gif)`,
-    //     'backgroundPosition': 'center',
-    //     'backgroundSize': 'cover',
-    //     'backgroundAttachment': 'fixed'
+    // const bgStyle = (image) => {
+    //     return {
+    //         'backgroundImage': `url(${image})`,
+    //         'backgroundAttachment': 'fixed',
+    //         'backgroundSize': 'cover',
+    //         'backgroundRepeat': 'no-repeat',
+    //         'backgroundPosition': 'center'
+    //     }
     // }
+
+    // const parallaxLayer = [
+    //     {
+    //         image: lazydevHomeWeb,
+    //         amount: -0.1
+    //     },
+    //     // {
+    //     //     image: lazydevMob,
+    //     //     amount: 0.2
+    //     // }
+    // ]
+
+    const prop = [
+        {
+            parallaxLayer: [
+                {
+                    image: lazydevHomeWeb,
+                    amount: -0.1
+                }
+            ],
+            
+            url: 'laazzzyyyydev.netlify.app',
+            subtitle: 'My attempt in making a dark-themed blog website with glass morhpism. It\'s still a work in progress.'            
+        },
+        {
+            parallaxLayer: [
+                {
+                    image: ipsHomeWeb,
+                    amount: -0.2
+                }
+            ],
+            
+            url: 'ishanpsahota.netlify.app',
+            subtitle: 'A resume website for myself. I\'m going to discontinue it soon for this one :0.'            
+        },
+        {
+            parallaxLayer: [
+                {
+                    image: impulsoHW,
+                    amount: -0.2
+                }
+            ],
+            
+            url: 'impulso.heroku.app',
+            subtitle: 'An AI Chat Bot about AI. The front-end coding of this website is done mostly by me.'            
+        }
+    ]
+
+    function RenderProjectItems() {
+        const items = prop.map((el, i) => {
+            return <ProjectWrapperLarge data={el} key={i} index={i} />
+        })
+
+        return items;
+    }
 
     return (
         <div className="home-wrapper text-special">
@@ -59,14 +123,16 @@ function Home() {
                 <div className="glass-overlay text-svg-container ">                
                     <div className="text-wrapper text-special col-xxl-6 ">
                         <h1 className="display-1 ">Hey,</h1>
-                        <h1> How you doin'? </h1>
+                        <h1> How you doin'? </h1>    
                         <a href="#projects"> 
                             <button type="button" 
                                 className={btnClass}>
+                                    <small>
                                     Explore &nbsp;
                                     <i className="bi-chevron-down"></i>
+                                    </small>                                    
                             </button>
-                        </a>
+                        </a>                   
                     </div>
                     <div className="col-xxl-6 svg-wrapper ">
                         {/* <img src={helloSvg} alt="welcome" className="img-fluid" /> */}
@@ -81,31 +147,15 @@ function Home() {
                         </div>
                     </div>                    
                 </div>                
+            </div>            
+            <div className="col-12 project-wrapper full-view mx-0 mb-1" id="projects">                
+                <h1 className="text-responsive"> Projects </h1>               
+                <RenderProjectItems />                                   
+                <img src={ellipse04} alt="gradient" className="gradient-img gradient-img-right" />              
             </div>
-            
-            <div className="text-svg-container row mx-0 mt-5 mb-1 full-view" id="projects">
-                <div className="text-wrapper  col-xl-6">
-                    <h1 className="text-responsive my-auto">
-                        Allow me to show you some of my creations :)
-                    </h1>                                                                
-                </div>
-                <div className="svg-wrapper col-xl-6">
-                    <div className="mockup-wrapper" id="lazydev-mockup">                        
-                        <div className="mockup-item" id="lazydev-mockup__wrapper">
-                            <picture className="" id="lazydev-mockup__img">                            
-                                <source media="(max-width:760px)" alt="lazydev" className="mockup-img" id="lazydev-mockup__img-mob" srcSet={lazydevMob}/>                                                        
-                                <img src={lazydevWeb} alt="lazydev" className="m-auto mockup-img" id="lazydev-mockup__img-web" />
-                            </picture>      
-                        </div>                                                
-                        <img src={ellipse04} alt="glass-bg" className="gradient-img gradient-img-right" />  
-                        <div className="my-2 mockup-text">
-                            <a href="https://laazzzyyyydev.netlify.app" className="mockup-link h6 " rel="noreferrer" target="_blank"> laazzzyyyydev.netlify.app </a>                        
-                        </div>                            
-                    </div>
-                </div>
-            </div>                                        
         </div>
     )
-}
+}            
+
 
 export default Home;
