@@ -9,10 +9,12 @@ import ProjectWrapperLarge from '../../components/projectComponents/ProjectWrapp
 import ellipse04 from '../../assets/glass/compressed/ellipse-xl.webp';
 
 // images
-import lazydevHomeWeb from '../../assets/images/compressed/lazydev-web.webp'
-
+import lazydevWeb from '../../assets/images/compressed/lazydev-web.webp'
 import ipsHomeWeb from '../../assets/images/compressed/ishanpsahota-home-web.webp'
 import impulsoHW from '../../assets/images/compressed/impulso-home-web.webp'
+import famTreeHW from '../../assets/images/compressed/fam-tree-web.webp'
+import miniprojects from '../../assets/images/compressed/miniprojects-web.webp'
+import insomniacs from '../../assets/images/compressed/insomniacs-web.webp'
 
 function Home() {    
 
@@ -77,9 +79,9 @@ function Home() {
         {
             parallaxLayer: [
                 {
-                    image: lazydevHomeWeb,
+                    image: lazydevWeb,
                     amount: -0.1
-                }
+                }                
             ],
             
             url: 'laazzzyyyydev.netlify.app',
@@ -105,7 +107,37 @@ function Home() {
             ],
             
             url: 'impulso.heroku.app',
-            subtitle: 'An AI Chat Bot about AI. The front-end coding of this website is done mostly by me.'            
+            subtitle: 'An AI Chat Bot about AI, made by my former employer. The front-end coding of this website is done mostly by me.'            
+        },
+        {
+            parallaxLayer: [
+                {
+                    image: famTreeHW,
+                    amount: -0.4
+                },                
+            ],
+            url: 'family-tree-i.netlify.app',
+            subtitle: 'Created within three days as a qualifying task for an internship. Complete with Authentication and basic family logic.'
+        },
+        {
+            parallaxLayer: [
+                {
+                    image:miniprojects,
+                    amount: -0.3
+                }
+            ],
+            url: 'miniprojects.netlify.app',
+            subtitle: 'Created in one single day as a qualifying task for an internship. Connected with GitHub API to fetch users and repositories.'
+        },
+        {
+            parallaxLayer: [
+                {
+                    image:insomniacs,
+                    amount: -0.3
+                }
+            ],
+            url: 'insomniacsblogger.herokuapp.com',
+            subtitle: 'My first attempt in making a Node-Express base website connected with MongoDB, front-end with Pug. '
         }
     ]
 
