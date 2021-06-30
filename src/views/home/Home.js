@@ -85,7 +85,8 @@ function Home() {
             ],
             
             url: 'laazzzyyyydev.netlify.app',
-            subtitle: 'My attempt in making a dark-themed blog website with glass morhpism. It\'s still a work in progress.'            
+            subtitle: 'My attempt in making a dark-themed blog website with glass morhpism. It\'s still a work in progress.',
+            tags: ['MEVN']      
         },
         {
             parallaxLayer: [
@@ -96,7 +97,8 @@ function Home() {
             ],
             
             url: 'ishanpsahota.netlify.app',
-            subtitle: 'A resume website for myself. I\'m going to discontinue it soon for this one :0.'            
+            subtitle: 'A resume website for myself. I\'m going to discontinue it soon for this one :0.',
+            tags: ['MEVN']      
         },
         {
             parallaxLayer: [
@@ -107,7 +109,8 @@ function Home() {
             ],
             
             url: 'impulso.heroku.app',
-            subtitle: 'An AI Chat Bot about AI, made by my former employer. The front-end coding of this website is done mostly by me.'            
+            subtitle: 'AI Chat bot project by my former employer. Most of the front-end of this project coded by me.',
+            tags: ['Angular']
         },
         {
             parallaxLayer: [
@@ -117,7 +120,8 @@ function Home() {
                 },                
             ],
             url: 'family-tree-i.netlify.app',
-            subtitle: 'Created within three days as a qualifying task for an internship. Complete with Authentication and basic family logic.'
+            subtitle: 'Created within three days as a qualifying task for an internship. Complete with Authentication and basic family logic.',
+            tags: ['MEVN']
         },
         {
             parallaxLayer: [
@@ -127,7 +131,8 @@ function Home() {
                 }
             ],
             url: 'miniprojects.netlify.app',
-            subtitle: 'Created in one single day as a qualifying task for an internship. Connected with GitHub API to fetch users and repositories.'
+            subtitle: 'Created in one single day as a qualifying task for an internship. Connected with GitHub API to fetch users and repositories.',
+            tags: ['VueJS']
         },
         {
             parallaxLayer: [
@@ -137,7 +142,8 @@ function Home() {
                 }
             ],
             url: 'insomniacsblogger.herokuapp.com',
-            subtitle: 'My first attempt in making a Node-Express base website connected with MongoDB, front-end with Pug. '
+            subtitle: 'My first attempt in making a Node-based website. ',
+            tags: ['Mongo', 'Express', 'NodeJS', 'PugJS']
         }
     ]
 
@@ -180,10 +186,14 @@ function Home() {
                     </div>                    
                 </div>                
             </div>            
-            <div className="col-12 project-wrapper full-view mx-0 mb-1" id="projects">                
+            <div className="col-12 project-wrapper mx-0 mb-1" id="projects">                
                 <h1 className="text-responsive"> Projects </h1>               
                 <RenderProjectItems />                                   
-                <img src={ellipse04} alt="gradient" className="gradient-img gradient-img-right" />              
+                <img src={ellipse04} alt="gradient" className="gradient-img gradient-img-01" />              
+                <img src={ellipse04} alt="gradient" className="gradient-img gradient-img-02 " />              
+                {/* <img src={ellipse04} alt="gradient" className="gradient-img gradient-img-03" />               */}
+                <img src={ellipse04} alt="gradient" className="gradient-img gradient-img-04" />              
+                {/* <img src={ellipse04} alt="gradient" className="gradient-img gradient-img-bottom" />               */}
             </div>
         </div>
     )

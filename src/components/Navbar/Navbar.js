@@ -5,25 +5,17 @@ import {
 import { useState, useEffect  } from 'react'
 
 import classNames from "classnames";
-
+import SunFill from 'bootstrap-icons/icons/sun-fill.svg'
+import Sun from 'bootstrap-icons/icons/sun.svg'
+import MoonFill from 'bootstrap-icons/icons/moon-fill.svg'
+import Moon from 'bootstrap-icons/icons/moon.svg'
 import logoWhite from '../../assets/svgs/logo-white.svg'
 import logoDark from '../../assets/svgs/logo-dark.svg'
-  
+import ThreeDotsV from 'bootstrap-icons/icons/three-dots-vertical.svg'
+
 function Navbar() {
 
-    const [ theme, setTheme ] = useState(document.body.getAttribute('data-theme'));
-
-    const iconClassLight = classNames({
-        'text-dark': theme.match('light'),        
-        'bi-sun-fill': theme.match('light'),
-        'bi-sun': theme.match('dark')
-    })
-
-    const iconClassDark = classNames({        
-        'text-dark': theme.match('light'),
-        'bi-moon-fill': theme.match('dark'),
-        'bi-moon': theme.match('light')
-    })
+    const [ theme, setTheme ] = useState(document.body.getAttribute('data-theme'));    
 
     const themeSwitchClass = classNames({
         'form-check': true,
@@ -143,15 +135,31 @@ function Navbar() {
                         Ishan Prasad
                     </Link>
                     <button className="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-                        <i className="bi-three-dots-vertical" id="dropdown-dots" />
+                    <img src={ThreeDotsV} className="" id="dropdown-dots" alt="menu toggle" />
                     </button>
                     <div className="collapse justify-content-end navbar-collapse " id="navbar">
                         <ul className="navbar-nav  mb-2 p-3 p-lg-0 mb-lg-0">
                             <li className="nav-item mx-auto">
                                 <div className={themeSwitchClass} id="theme-switch">
-                                    <label className="form-check-label" > <i className={iconClassLight}  ></i> </label>
+                                    <label className="form-check-label" >  
+                                        {theme.match('dark') && 
+                                            <img src={Sun} className="invert-color" alt="light mode off" />
+                                        }
+                                        {
+                                            theme.match('light') && 
+                                            <img src={SunFill} alt="light mode on"  />
+                                        }
+                                    </label>
                                     <input className="form-check-input" id="theme_switch" name="theme_switch" onChange={changeTheme} checked={theme === 'dark' ? true : false} value="dark" type="checkbox" />
-                                    <label className="form-check-label" > <i className={iconClassDark}  ></i>  </label>
+                                    <label className="form-check-label" > 
+                                        {theme.match('dark') && 
+                                            <img src={MoonFill} className="invert-color" alt="dark mode on" />
+                                        }
+                                        {
+                                            theme.match('light') && 
+                                            <img src={Moon} alt="dark mode off" />
+                                        }
+                                    </label>
                                 </div>
                             </li>
                             {/* <li className="nav-item">

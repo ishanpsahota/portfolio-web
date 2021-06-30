@@ -71,6 +71,18 @@ a {
         color: $blue-md !important;
     }
 
+    // &-secondary {
+    //     color: $secondary !important;
+    // }
+
+    &-index {        
+
+        &:hover {
+            color: $info !important;
+        }
+        transition: 0.2s ease;
+    }
+
 }
 
 [data-theme="dark"] {
