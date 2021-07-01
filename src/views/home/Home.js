@@ -87,7 +87,7 @@ function Home() {
                     amount: -0.1
                 }
             ],
-            url: 'ishanprasad.netlify.app',
+            url: 'ishanpsahota.netlify.app',
             subtitle: 'And lastly the one you are currently scrolling - My very own portfolio website. ',
             tags: ['React']
         }
