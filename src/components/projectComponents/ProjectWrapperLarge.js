@@ -20,7 +20,7 @@ function ProjectWrapperLarge(props) {
                         <div className="project-item-img-text d-flex flex-lg-row justify-content-between flex-column align-items-md-end">
                             <h1 className="text-responsive text-secondary text-index"> 0{props.index+1} </h1>                                    
                             <h5 className="mb-3">
-                                <a href={`https://${props.data.url}`} className="mockup-link text-secondary">
+                                <a href={`https://${props.data.url}`} target="_blank" rel="noreferrer" className="mockup-link text-secondary">
                                     {/* <img src={link} alt="url" /> */}
                                     {props.data.url}                                    
                                 </a>
