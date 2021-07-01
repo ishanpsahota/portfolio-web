@@ -1,0 +1,134 @@
+html {
+  --theme-color: #eee;
+  --text-color: #000;
+  --theme-border: 1px solid rgba(255, 255, 255, 0.4);
+  --theme-glass-overlay: rgba(200, 200, 200, 0.1);
+  --theme-glass-wrapper: rgba(255, 255, 255, 0.1);
+  --theme-glass-bg: rgb(255, 2555, 255);
+  --shadow: 10px 10.5px 15px rgba(20, 20, 20, 0.1);
+}
+
+[data-theme=dark] {
+  --theme-color: #121212 !important;
+  --theme-border: 1px solid rgba(252, 210, 210, 0.15) !important;
+  --text-color: #eee !important;
+  --theme-glass-overlay: rgba(10, 10, 10, 0.3) !important;
+  --theme-glass-wrapper: rgba(150, 150, 150, 0.1) !important;
+  --shadow: 0px 5px 5px rgba(10, 10, 10, 0.3) !important;
+  --theme-glass-bg: rgb(150, 150, 150);
+}
+
+.gradient {
+  background: #b5179e;
+  background: linear-gradient(126deg, #b5179e 10%, #4361ee 70%);
+}
+
+.gradient-radial {
+  background: #b5179e;
+  background: radial-gradient(circle, #b5179e 10%, #4361ee 70%, #4895ef 80%);
+}
+
+:root {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+:root::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  background-color: var(--theme-color);
+  box-sizing: border-box;
+  transition: 0.2s ease;
+  scroll-behavior: smooth;
+}
+
+[data-theme=light] .gradient {
+  color: #fff !important;
+}
+
+.row {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.hero-polygon-wrapper {
+  clip-path: polygon(100% 0%, 0% 0%, 0% 100%, 100% 85%);
+  position: relative;
+}
+
+.text-svg-container {
+  text-align: left;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  z-index: 10;
+}
+.text-svg-container .text-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100%;
+  padding: 2rem 2rem 2rem 5rem;
+}
+.text-svg-container .svg-wrapper {
+  margin: auto;
+  padding: 1rem 5rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+.text-svg-container .svg-wrapper img.mockup-img {
+  max-width: 80%;
+  height: auto;
+  margin: auto;
+}
+.text-svg-container .svg-wrapper img.mockup-img.gif {
+  max-width: 100%;
+}
+
+.get-in-touch-wrapper {
+  position: relative;
+  min-height: 20rem;
+  padding: 3rem 1rem;
+  margin: 3rem 0 0;
+}
+.get-in-touch-wrapper img {
+  max-height: 120%;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+
+.footer {
+  text-align: center;
+  padding: 0.5rem 1rem;
+}
+
+@media screen and (max-width: 996px) {
+  .text-svg-container {
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .svg-wrapper {
+    padding: 0.5rem !important;
+  }
+  .svg-wrapper img.mockup-img {
+    max-width: 95% !important;
+  }
+
+  .text-wrapper {
+    padding: 1rem !important;
+  }
+
+  .get-in-touch-wrapper {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 1368px) {
+  .text-svg-container {
+    text-align: center;
+  }
+}

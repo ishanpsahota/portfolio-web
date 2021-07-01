@@ -1,7 +1,7 @@
 
 import classNames from "classnames"
 import { useEffect, useState } from "react"
-import chevronDown from 'bootstrap-icons/icons/chevron-down.svg';
+// import chevronDown from 'bootstrap-icons/icons/chevron-down.svg';
 import chevronDoubleRight from 'bootstrap-icons/icons/chevron-right.svg';
 
 function HeroWrapper() {
@@ -34,26 +34,26 @@ function HeroWrapper() {
     return (
         <div className="row full-view gradient hero-polygon-wrapper" id="home__hero-wrapper">
             <div className="glass-overlay text-svg-container ">                
-                <div className="text-wrapper text-special col-xxl-6 ">
+                <div className="text-wrapper text-special col-xl-6 ">
                     <h1 className="display-1 ">Hey,</h1>
                     <h1> How you doin'? </h1>    
                     <a href="#GetInTouch"> 
                         <button type="button" 
                             className={btnClass}>
-                                <small>
+                                
                                 Get In touch &nbsp;
-                                <img src={chevronDoubleRight} className={theme.match('dark') && 'invert-color'} alt="down arrow" />
-                                </small>                                    
+                                <img src={chevronDoubleRight}  className={theme.match('dark') && 'invert-color'} alt="down arrow" />
+                                
                         </button>
                     </a>                   
-                    <a href="#projects" className="p-1 text-decoration-none text-light hover-accent">                         
-                        <small>
+                    {/* <a href="#projects" className="p-1 text-decoration-none text-light hover-accent">                         
+                        <button className="btn btn-sm btn-outline-light rounded-pill">
                         Explore Projects &nbsp;
-                        <img src={chevronDown} className="invert-color " alt="down arrow" />
-                        </small>                                                            
-                    </a>                   
+                        {/* <img src={chevronDown} className="invert-color " alt="down arrow" /> 
+                        </button>                                                            
+                    </a>                    */}
                 </div>
-                <div className="col-xxl-6 svg-wrapper ">
+                <div className="col-xl-6 svg-wrapper ">
                     {/* <img src={helloSvg} alt="welcome" className="img-fluid" /> */}
                     <div className="glass-wrapper animation-fade-show">
                         <small> I'm </small>

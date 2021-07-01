@@ -7,6 +7,7 @@ import Home from './views/home/Home'
 
 // components
 import Navbar from './components/Navbar/Navbar'
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Home />
           </Route>
         </Switch>
+        <Footer />
       </div>    
     </Router>
   );

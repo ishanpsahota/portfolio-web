@@ -180,12 +180,13 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-        }
+            // max-width: 80% !important;
+        }        
 
         &-left-center {
-            left: -10%;
-            top: -40%;
-            // transform: translate(0, -50%);
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
         }
 
         &-blur {
@@ -238,7 +239,7 @@
 .social {
 
     &-wrapper {
-        margin: 1.5rem auto 5rem;
+        margin: 1.5rem auto 4.5rem;
         padding: 2rem 0.5rem;    
         scroll-behavior: smooth;
         display: flex;
@@ -390,5 +391,11 @@
                 border: $theme-border;
             }
         }
+    }
+
+    .gradient-img-left-center {
+        top: 50%;
+        left: -10%;
+        transform: translate(-10%, -50%);
     }
 }

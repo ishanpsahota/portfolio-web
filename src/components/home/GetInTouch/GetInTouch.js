@@ -69,10 +69,9 @@ function GetInTouch() {
 
     const scrollBtn = classNames({
         'btn': true,
-        'bg-light': theme.match('dark') ? true : false,
-        'bg-dark': theme.match('light') ? true : false,
-        'rounded-circle': true,
-        'm-1': true
+        'm-1': true,      
+        'bg-accent': theme.match('dark') ? true : false,     
+        'bg-info': theme.match('light') ? true : false
     })
 
 
@@ -103,13 +102,13 @@ function GetInTouch() {
             </div>            
             <div className="scroll-buttons d-lg-none d-block">
                 <button className={scrollBtn} type="button"  onClick={(e) => scrollDiv(e, 'left')}  >
-                    <img src={chevronLeft}  className={theme.match('light') && 'invert-color'} alt="scroll left"  />
+                    <img src={chevronLeft} style={{height: '1rem', width: '1rem' }} className={theme.match('dark') && 'invert-color'} alt="scroll left"  />
                 </button>
                 <button className={scrollBtn} type="button" onClick={(e) => scrollDiv(e, 'right')} >
-                    <img src={chevronRight} className={theme.match('light') && 'invert-color'}  alt="scroll right" />
+                    <img src={chevronRight} style={{height: '1rem', width: '1rem' }} className={theme.match('dark') && 'invert-color'}  alt="scroll right" />
                 </button>
             </div>
-            <img src={gradientImg} className="gradient-img gradient-img-center" alt="gradient img" />
+            <img src={gradientImg} className="gradient-img gradient-img-left-center" alt="gradient img" />
         </div>
     )
 }
