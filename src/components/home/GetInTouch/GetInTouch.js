@@ -71,6 +71,7 @@ function GetInTouch() {
         'btn': true,
         'bg-light': theme.match('dark') ? true : false,
         'bg-dark': theme.match('light') ? true : false,
+        'rounded-circle': true,
         'm-1': true
     })
 
@@ -102,10 +103,10 @@ function GetInTouch() {
             </div>            
             <div className="scroll-buttons d-lg-none d-block">
                 <button className={scrollBtn} type="button"  onClick={(e) => scrollDiv(e, 'left')}  >
-                    <img src={chevronLeft}  alt="scroll left"  />
+                    <img src={chevronLeft}  className={theme.match('dark') && 'invert-color'} alt="scroll left"  />
                 </button>
                 <button className={scrollBtn} type="button" onClick={(e) => scrollDiv(e, 'right')} >
-                    <img src={chevronRight}  alt="scroll right" />
+                    <img src={chevronRight} className={theme.match('dark') && 'invert-color'}  alt="scroll right" />
                 </button>
             </div>
             <img src={gradientImg} className="gradient-img gradient-img-center" alt="gradient img" />
