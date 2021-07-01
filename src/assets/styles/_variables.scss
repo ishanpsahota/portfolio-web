@@ -6,7 +6,8 @@ html {
     --theme-border:  1px solid rgba(255, 255, 255, 0.4);
     --theme-glass-overlay: rgba(200, 200, 200, 0.1);
     --theme-glass-wrapper: rgba(255, 255, 255, 0.1);
-    --shadow: 10px 10.5px 15px rgba(10, 10, 10, 0.15);
+    --theme-glass-bg: rgb(255, 2555, 255);
+    --shadow: 10px 10.5px 15px rgba(20, 20, 20, 0.1);
     // --glass-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.5);
     // --glass-shadow: inset 0 0 2000px rgba(10, 10, 10, 0.5);
 
@@ -16,13 +17,15 @@ html {
 
     // --theme-color: #232323;
     --theme-color: #121212 !important;
-    --theme-border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    // --theme-border: 1px solid rgba(252, 210, 210, 0.15) !important;
+    --theme-border: 1px solid rgba(252, 210, 210, 0.15) !important;
     // --theme-color: #14213d;
     --text-color: #eee !important;
     // https://coolors.co/f72585-b5179e-7209b7-560bad-480ca8-3a0ca3-3f37c9-4361ee-4895ef-4cc9f0
     --theme-glass-overlay: rgba(10, 10, 10, 0.3) !important;
     --theme-glass-wrapper: rgba(150, 150, 150, 0.1) !important;
     --shadow: 0px 5px 5px rgba(10, 10, 10, 0.3) !important;
+    --theme-glass-bg: rgb(150, 150, 150);
     // --glass-shadow: inset 0 0 2000px rgba(10, 10, 10, 0.5);
     // --glass-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.5);
 
@@ -40,6 +43,7 @@ $info: #659df1;
 $secondary: #dedede;
 $warning: #febf01;
 $danger: #ff1000;
+$grey: #dee2e6;
 
 // base colors
 $background-color: var(--theme-color);
@@ -61,6 +65,7 @@ $transition: 0.2s ease;
 // glass
 $glass-overlay: var(--theme-glass-overlay);
 $glass-wrapper: var(--theme-glass-wrapper);
+$glass-bg: var(--theme-glass-bg);
 // $glass-shadow: var(--glass-shadow);
 
 .gradient {

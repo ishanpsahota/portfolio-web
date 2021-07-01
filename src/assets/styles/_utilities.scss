@@ -42,7 +42,7 @@
         }
         
         &-bottom {
-            border-bottom: $theme-border;
+            border-bottom: $theme-border;            
         }
 
         &-right {
@@ -106,6 +106,19 @@
     }
 }
 
+.hover {
+    
+    transition: 0.2s ease;
+
+    &-accent {
+
+        &:hover {
+            color: $accent !important;
+        }
+
+    }
+}
+
 .project {
     &-wrapper {
         padding: 1.5rem 0.75rem;
@@ -118,7 +131,7 @@
 
     &-item {
 
-        margin: 2.5rem auto 3rem;
+        margin: 1rem auto;
 
         &-img {
 
@@ -160,8 +173,24 @@
     &-img {
 
         position: absolute;        
-        z-index: -1;        
+        z-index: -10;        
         max-width: 130%;
+
+        &-center {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        &-left-center {
+            left: -10%;
+            top: -40%;
+            // transform: translate(0, -50%);
+        }
+
+        &-blur {
+            filter: blur(100px)
+        };
 
         &-right {
             right: -40%;
@@ -170,22 +199,22 @@
 
         &-01 {
             right: -40%;
-            top: 2%;
+            top: 5%;
         }
 
         &-02 {
             left: -40%;
-            top: 20%;
+            top: 30%;
         }
 
         &-03 {
             right: -40%;
-            top: 33%;
+            top: 50%;
         }
 
         &-04 {
             left: -40%;
-            top: 50%;
+            top: 75%;
         }
 
         &-05 {
@@ -204,6 +233,62 @@
 
 .invert-color {
     filter: brightness(50%) invert(1);
+}
+
+.social {
+
+    &-wrapper {
+        margin: 1.5rem auto 5rem;
+        padding: 2rem 0.5rem;    
+        scroll-behavior: smooth;
+        display: flex;
+        flex-direction: row;
+        overflow-x: scroll;
+        height: 100%;
+        text-align: center;
+        
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    &-icon {        
+        min-height: 4rem;
+        max-height: 6rem;
+            
+    }
+
+    &-item {
+        padding: 3rem 2rem !important;
+        min-width: 14rem;        
+    }
+
+    &-text {
+        &-wrapper {
+            margin: 1rem auto 0;
+
+            h4 {
+                margin: 1rem auto;
+                line-height: 0;
+            }
+            
+            a {
+                text-decoration: none;
+            }
+
+            .bs-icon {
+                visibility: hidden;
+                transition: 0.2s ease;
+            }
+
+            &:hover {
+                .bs-icon {
+                    visibility: visible;
+                }
+            }
+        }
+    }
+
 }
 
 .badge {
@@ -250,17 +335,17 @@
 
             &-02 {
                 left: -20%;
-                top: 15%;
+                top: 35%;
             }
 
             &-03 {
                 right: -20%;
-                top: 35%;
+                top: 60%;
             }
 
             &-04 {
                 left: -20%;
-                top: 55%;
+                top: 75%;
             }
 
             &-05 {
@@ -299,7 +384,7 @@
             margin: 5rem auto;
         
             &-img-div {
-                min-height: 30rem;
+                min-height: 35rem;
                 box-shadow: $shadow;
                 // border-radius: 10px;
                 border: $theme-border;

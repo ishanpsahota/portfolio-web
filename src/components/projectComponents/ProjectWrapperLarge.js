@@ -1,8 +1,17 @@
 
 import { ParallaxBanner } from "react-scroll-parallax";
+import flower from 'bootstrap-icons/icons/flower3.svg'
+import classNames from "classnames";
 // import link from 'bootstrap-icons/icons/link-45deg.svg'
 
-function ProjectWrapperLarge(props) {    
+function ProjectWrapperLarge(props) {        
+
+    let theme = document.body.getAttribute('data-theme')
+
+    var iconClass = classNames({
+        'invert-color': theme.match('dark') ? true : false,
+        'my-2': true
+    })
 
     return (                
         <div className="project-item">        
@@ -25,7 +34,8 @@ function ProjectWrapperLarge(props) {
                         return <span className="badge badge-pill badge-tag badge-blue-md" key={j}> {el} </span>
                     })}
                 </div>                
-            </div>                
+            </div>     
+            <img src={flower} alt="flower" className={iconClass} width='24' height='24' />
         </div>
     )
 

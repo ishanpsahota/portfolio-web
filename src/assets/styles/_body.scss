@@ -76,6 +76,23 @@ body {
     }
 }
 
+.get-in-touch {
+
+    &-wrapper {
+
+        // background: $gradient-linear;
+        position: relative;
+        min-height: 20rem;
+        padding: 3rem 1rem;
+        margin: 3rem 0 0;
+        // background: url('../glass/compressed/ellipse-xl.webp');
+        // background-size: 100%;
+        // background-position: center;        
+        // background-repeat: no-repeat;
+
+    }
+
+}
 
 @media screen and (max-width: 996px) {
 
@@ -92,6 +109,12 @@ body {
 
     .text-wrapper {
         padding: 1rem !important;
+    }
+
+    .get-in-touch {
+        &-wrapper {
+            text-align: center;
+        }
     }
 }
 

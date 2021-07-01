@@ -126,7 +126,7 @@ function Navbar() {
 
     return (
         <Router>
-            <nav className="navbar navbar-expand-lg navbar-dark nav-wrapper border-theme-bottom" id="nav-wrapper">
+            <nav className="navbar navbar-expand-lg navbar-dark nav-wrapper" id="nav-wrapper">
                 <div className="container-fluid">
                     <Link to="/" className="navbar-brand text-special logo-link" id="navbar-brand">
                         <img src={logoWhite} className={logoLightClass}  alt="Ishan Prasad" />
@@ -135,7 +135,7 @@ function Navbar() {
                         Ishan Prasad
                     </Link>
                     <button className="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-                    <img src={ThreeDotsV} className="" id="dropdown-dots" alt="menu toggle" />
+                    <img src={ThreeDotsV} className={ theme.match('dark') && 'invert-color' } id="dropdown-dots" alt="menu toggle" />
                     </button>
                     <div className="collapse justify-content-end navbar-collapse " id="navbar">
                         <ul className="navbar-nav  mb-2 p-3 p-lg-0 mb-lg-0">
