@@ -33,7 +33,7 @@ function Home() {
             
             url: 'ishanpsahota.netlify.app',
             subtitle: 'A resume website for myself. I\'m going to discontinue it soon for this one :0.',
-            tags: ['MEVN']      
+            tags: ['MEVN', 'Veux']      
         },
         {
             parallaxLayer: [
@@ -79,6 +79,17 @@ function Home() {
             url: 'insomniacsblogger.herokuapp.com',
             subtitle: 'My first attempt in making a Node-based website. ',
             tags: ['Mongo', 'Express', 'NodeJS', 'PugJS']
+        },
+        {
+            parallaxLayer: [
+                {
+                    image: 'https://res.cloudinary.com/ishanpsahota/image/upload/v1625146196/portfolio/portfolio_jyb2kn.webp',
+                    amount: -0.1
+                }
+            ],
+            url: 'ishanprasad.netlify.app',
+            subtitle: 'And lastly the one you are currently scrolling - My very own portfolio website. ',
+            tags: ['React']
         }
     ]
 
