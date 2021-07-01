@@ -31,7 +31,7 @@ function Home() {
                 }
             ],
             
-            url: 'ishanpsahota.netlify.app',
+            url: 'resume-ishanpsahota.netlify.app',
             subtitle: 'A resume website for myself. I\'m going to discontinue it soon for this one :0.',
             tags: ['MEVN', 'Veux']      
         },
