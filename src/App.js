@@ -12,7 +12,7 @@ import Footer from './components/Footer/Footer';
 function App() {
   return (
     <Router>
-      <div className="App container-fluid p-0  m-0" id="app">      
+      <div className="App text-special container-fluid p-0  m-0" id="app">      
         <header className="header-wrapper">
             <Navbar />
         </header>

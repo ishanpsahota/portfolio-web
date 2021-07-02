@@ -34,7 +34,7 @@ function HeroWrapper() {
     return (
         <div className="row full-view gradient hero-polygon-wrapper" id="home__hero-wrapper">
             <div className="glass-overlay text-svg-container ">                
-                <div className="text-wrapper text-special col-xl-6 ">
+                <div className="text-wrapper col-xl-6 ">
                     <h1 className="display-1 ">Hey,</h1>
                     <h1> How you doin'? </h1>    
                     <a href="#GetInTouch"> 

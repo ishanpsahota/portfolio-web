@@ -102,6 +102,42 @@ body {
 
 }
 
+.workexp {
+    &-wrapper {
+        padding: 3rem 1rem;
+        margin: 2rem 0;
+        position: relative;
+    }
+    
+    &-item {
+
+        padding: 1rem 1rem 2.5rem;
+        margin-bottom: 2rem;
+
+        .title {
+            
+        }
+
+        .duration {
+
+        }
+
+        .employer {
+            color: $accent;
+        }
+    }
+
+    &-ul-list {
+
+        list-style-type: decimal;
+        
+        &-item {
+            text-transform: capitalize;
+        }
+
+    }
+}
+
 .footer {
     text-align: center;
     padding: 0.5rem 1rem;

@@ -2,6 +2,7 @@
 import ProjectWrapperLarge from '../../components/projectComponents/ProjectWrapperLarge';
 import HeroWrapper from '../../components/home/HeroWrapper/HeroWrapper';
 import GetInTouch from '../../components/home/GetInTouch/GetInTouch';
+import WorkExpWrapper from '../../components/home/WorkExp/WorkExpWrapper/WorkExpWrapper';
 
 function Home() {        
 
@@ -93,6 +94,49 @@ function Home() {
         }
     ]
 
+    const workExp = [
+        {
+            title: 'Angular Intern',
+            duration: {
+                from: '01/2021',
+                to: '02/2021'
+            },            
+            objectives: [
+                'Developed official projects on Angular.',
+                'Worked on prototypes and mockups on Figma.',
+                'Version Control & working on branches with GitHub.',
+                'Communicating with team on Slack.'
+            ],
+            location: 'Work From Home - IND'
+        },
+        {
+            title: 'Web Developer Intern',
+            duration: {
+                from: '05/2019',
+                to: '08/2019'
+            },            
+            objectives: [
+                'Designed websites using HTML, CSS, Bootstrap, jQuery, CodeIgniter, PHP, MySQL.',
+                'Working on projects with team.'                
+            ],
+            location: 'Punjab, IND'
+        },
+        {
+            title: 'IT Intern',
+            duration: {
+                from: '05/2019',
+                to: '07/2019'
+            },            
+            objectives: [
+                'Automation of services.',
+                'Upgradation of systems.',
+                'Shifting work to Google Drive.',
+                'Training employees to work with Google Drive.'
+            ],
+            location: 'Punjab, IND'
+        }
+    ]
+
     function RenderProjectItems() {
         const items = prop.map((el, i) => {
             return <ProjectWrapperLarge data={el} key={i} index={i} />
@@ -102,9 +146,9 @@ function Home() {
     }
 
     return (
-        <div className="home-wrapper text-special">            
+        <div className="home-wrapper ">            
             <HeroWrapper />
-            <div className="row project-wrapper mx-0 mb-1" id="projects">                
+            <div className="row project-wrapper mx-0 mb-1" id="Projects">                
                 <h1 className="text-responsive"> Projects </h1>               
                 <RenderProjectItems />                                   
                 <img src={gradientImages.one} alt="gradient" className="gradient-img gradient-img-01" />              
@@ -112,6 +156,7 @@ function Home() {
                 <img src={gradientImages.one} alt="gradient" className="gradient-img gradient-img-03" />              
                 <img src={gradientImages.one} alt="gradient" className="gradient-img gradient-img-04" />                              
             </div>
+            <WorkExpWrapper data={workExp} />
             <GetInTouch />  
             {/* <img src={gradientImages.one} alt="gradient" className="gradient-img gradient-img-center" />                                                     */}
         </div>
