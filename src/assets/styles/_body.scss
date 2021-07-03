@@ -143,6 +143,16 @@ body {
     padding: 0.5rem 1rem;
 }
 
+@media screen and (max-width: 769px) {
+    .hero-polygon-wrapper {
+        min-height: 45rem;
+    }
+    
+    .text-wrapper {
+        margin: auto;
+    }
+}
+
 @media screen and (max-width: 996px) {
 
     .text-svg-container {
